@@ -1,0 +1,65 @@
+
+
+.btn-load {
+    width: 101px;
+    height: 29px;
+    font-size: 1.2rem;
+    color: var(--pink);
+    font-weight: 800;
+    line-height: 1.25rem;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 1.5rem;
+    border-color: var(--pink);
+    border: 1px solid;
+    background-color: #fff7fa;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+    opacity: 0.9;
+    &:hover {
+        color: var(--pink) !important;
+        border-color: var(--pink) !important;
+
+        --tw-bg-opacity: 1 !important;
+        background-color: rgb(255 240 246 / 1) !important;
+    }
+}
+
+// hover của commnet và like
+.col-icon {
+    &:hover {
+      color: #053b50; // Màu hồng đậm
+    }
+  }
+
+  .comment-container {
+    border: 1px solid #C0C0C0; // Thiết lập border cho comment container
+    padding: 18px; // Tăng khoảng cách nội dung và border
+    margin: 8px; // Điều chỉnh khoảng cách giữa các comment container
+    position: relative; // Để có thể sử dụng position: absolute cho con bên trong
+
+    margin-bottom: 20px; // Tạo khoảng cách dưới comment-container
+    // box-shadow: inset 10px 0 10px rgba(0, 0, 0, 0.1);
+  & > hr {
+    margin: 20px 0; // Tạo khoảng cách trên và dưới cho dấu ngăn cách hr
+  }
+
+  & > Row {
+    margin-top: 20px; // Tạo khoảng cách trên cho dòng con
+  }
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icon {
+    align-self: flex-end;
+    margin-left: 10px; 
+  }

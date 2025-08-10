@@ -1,0 +1,13 @@
+.the-loai-phim {
+ 
+    .span:not(:last-child)::after {
+        content: ', ';
+    }
+}
+.icon:hover {
+    transform: scale(1.05);
+}
+.anchor {
+    height: 1000px;
+    font-size: xx-small;
+}

@@ -1,0 +1,2886 @@
+{
+	"info": {
+		"_postman_id": "7c4929e1-e10c-4f1c-9b21-329efb0d5755",
+		"name": "TicketEZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27666310",
+		"_collection_link": "https://lively-resonance-248921.postman.co/workspace/New-Team-Workspace~ee586083-a68d-45a4-b57c-c58d464a7887/collection/27666310-7c4929e1-e10c-4f1c-9b21-329efb0d5755?action=share&source=collection_link&creator=27666310"
+	},
+	"item": [
+		{
+			"name": "Quản lí rạp",
+			"item": [
+				{
+					"name": "Cinema complex",
+					"item": [
+						{
+							"name": "All cụm rạp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinemaComplex/getAll",
+									"host": [
+										"{{url}}cinemaComplex"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All cụm rạp By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinemaComplex?page=1&limit=10",
+									"host": [
+										"{{url}}cinemaComplex"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 cụm rạp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinemaComplex/1",
+									"host": [
+										"{{url}}cinemaComplex"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm cụm rap",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Standard Cinema Complex\",\r\n    \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n    \"phone\": \"0192949422\",\r\n    \"openingTime\": \"08:00:00\",\r\n    \"closingTime\": \"22:00:00\",\r\n    \"province\": {\r\n        \"id\": 2,\r\n        \"name\": \"Hồ Chí Minh\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}cinemaComplex",
+									"host": [
+										"{{url}}cinemaComplex"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa cụm rạp",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"id\": 20,\r\n    \"name\": \"Standard Cinema 123123213123\",\r\n    \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n    \"phone\": \"0192949422\",\r\n    \"openingTime\": \"08:00:00\",\r\n    \"closingTime\": \"22:00:00\",\r\n    \"province\": {\r\n        \"id\": 2,\r\n        \"name\": \"Hồ Chí Minh\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}cinemaComplex/20",
+									"host": [
+										"{{url}}cinemaComplex"
+									],
+									"path": [
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá cụm rạp",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinemaComplex/20",
+									"host": [
+										"{{url}}cinemaComplex"
+									],
+									"path": [
+										"20"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cinema",
+					"item": [
+						{
+							"name": "All rạp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinema/getAll",
+									"host": [
+										"{{url}}cinema"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All rạp By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinema",
+									"host": [
+										"{{url}}cinema"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1  rạp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinema/10",
+									"host": [
+										"{{url}}cinema"
+									],
+									"path": [
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm rap",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Cinema 10\",\r\n    \"status\": true,\r\n    \"cinemaType\": {\r\n        \"id\": 7,\r\n        \"typeName\": \"Independent\",\r\n        \"description\": \"Independent cinema offering diverse films.\"\r\n    },\r\n    \"cinemaComplex\": {\r\n        \"id\": 5,\r\n        \"name\": \"Multiplex Cinema Complex\",\r\n        \"address\": \"Quốc Lộ 1A, Châu Thành, Sóc Trăng\",\r\n        \"phone\": \"0908903495\",\r\n        \"openingTime\": \"11:00:00\",\r\n        \"closingTime\": \"23:50:00\",\r\n        \"province\": {\r\n            \"id\": 54,\r\n            \"name\": \"Sóc Trăng\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}cinema",
+									"host": [
+										"{{url}}cinema"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa rạp",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 18,\r\n    \"name\": \"Cinema 18\",\r\n    \"status\": true,\r\n    \"cinemaType\": {\r\n        \"id\": 7,\r\n        \"typeName\": \"Independent\",\r\n        \"description\": \"Independent cinema offering diverse films.\"\r\n    },\r\n    \"cinemaComplex\": {\r\n        \"id\": 5,\r\n        \"name\": \"Multiplex Cinema Complex\",\r\n        \"address\": \"Quốc Lộ 1A, Châu Thành, Sóc Trăng\",\r\n        \"phone\": \"0908903495\",\r\n        \"openingTime\": \"11:00:00\",\r\n        \"closingTime\": \"23:50:00\",\r\n        \"province\": {\r\n            \"id\": 54,\r\n            \"name\": \"Sóc Trăng\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}cinema/10",
+									"host": [
+										"{{url}}cinema"
+									],
+									"path": [
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá rạp",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinema/18",
+									"host": [
+										"{{url}}cinema"
+									],
+									"path": [
+										"18"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cinema type",
+					"item": [
+						{
+							"name": "All loại rạp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinemaType",
+									"host": [
+										"{{url}}cinemaType"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 loại rạp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinemaType/10",
+									"host": [
+										"{{url}}cinemaType"
+									],
+									"path": [
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm loại rạp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeName\": \"Regular\",\r\n    \"description\": \"Standard cinema with regular amenities.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}cinemaType",
+									"host": [
+										"{{url}}cinemaType"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa loại rạp",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"typeName\": \"Regular\",\r\n    \"description\": \"Standard cinema with regular amenities.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}cinemaType/1",
+									"host": [
+										"{{url}}cinemaType"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá loại rạp",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}cinemaType/11",
+									"host": [
+										"{{url}}cinemaType"
+									],
+									"path": [
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Province",
+					"item": [
+						{
+							"name": "All tỉnh",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}province",
+									"host": [
+										"{{url}}province"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 tỉnh",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}province/61",
+									"host": [
+										"{{url}}province"
+									],
+									"path": [
+										"61"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm tỉnh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Hà Nội\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}province",
+									"host": [
+										"{{url}}province"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa tỉnh",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 60,\r\n    \"name\": \"Hà Nội\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}province/1",
+									"host": [
+										"{{url}}province"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá tỉnh",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}province/1",
+									"host": [
+										"{{url}}province"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Quản lí phim",
+			"item": [
+				{
+					"name": "Movie",
+					"item": [
+						{
+							"name": "All phim",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie/getAll",
+									"host": [
+										"{{url}}movie"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All phim By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie?page=1&limit=10",
+									"host": [
+										"{{url}}movie"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 phim",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie/20",
+									"host": [
+										"{{url}}movie"
+									],
+									"path": [
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm phim",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Avengers: Endgame\",\r\n    \"description\": \"Cuộc chiến cuối cùng của siêu anh hùng Marvel\",\r\n    \"duration\": \"02:33:00\",\r\n    \"releaseDate\": \"2019-04-25T17:00:00.000+00:00\",\r\n    \"country\": \"United States\",\r\n    \"rating\": 8.4,\r\n    \"videoTrailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\r\n    \"movieStudio\": {\r\n        \"id\": 1,\r\n        \"name\": \"Walt Disney Pictures\",\r\n        \"country\": \"Hoa Kỳ\",\r\n        \"email\": \"tuhieu@disney.com\",\r\n        \"description\": \"Studio sản xuất phim của Disney.\"\r\n    },\r\n    \"mpaaRating\": {\r\n        \"id\": 3,\r\n        \"ratingCode\": \"PG-13\",\r\n        \"icon\": \"PG-13_icon.png\",\r\n        \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}movie",
+									"host": [
+										"{{url}}movie"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa phim",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Avengers: Endgame1\",\r\n    \"description\": \"Cuộc chiến cuối cùng của siêu anh hùng Marvel\",\r\n    \"duration\": \"02:33:00\",\r\n    \"releaseDate\": \"2019-04-25T17:00:00.000+00:00\",\r\n    \"country\": \"United States\",\r\n    \"rating\": 8.4,\r\n    \"videoTrailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\r\n    \"movieStudio\": {\r\n        \"id\": 1,\r\n        \"name\": \"Walt Disney Pictures\",\r\n        \"country\": \"Hoa Kỳ\",\r\n        \"email\": \"tuhieu@disney.com\",\r\n        \"description\": \"Studio sản xuất phim của Disney.\"\r\n    },\r\n    \"mpaaRating\": {\r\n        \"id\": 3,\r\n        \"ratingCode\": \"PG-13\",\r\n        \"icon\": \"PG-13_icon.png\",\r\n        \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}movie/1",
+									"host": [
+										"{{url}}movie"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá phim",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie/20",
+									"host": [
+										"{{url}}movie"
+									],
+									"path": [
+										"20"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Movie studio",
+					"item": [
+						{
+							"name": "All hãng phim",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie-studio/getAll",
+									"host": [
+										"{{url}}movie-studio"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All hãng phim By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie-studio",
+									"host": [
+										"{{url}}movie-studio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 hãng phim",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie-studio/1",
+									"host": [
+										"{{url}}movie-studio"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm hãng phim",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Walt Disney Pictures\",\r\n    \"country\": \"Hoa Kỳ\",\r\n    \"email\": \"tuhieu@disney.com\",\r\n    \"description\": \"Studio sản xuất phim của Disney.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}movie-studio",
+									"host": [
+										"{{url}}movie-studio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa hãng phim",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Walt Disney Pictures\",\r\n    \"country\": \"Hoa Kỳ\",\r\n    \"email\": \"tuhieu@disney.com\",\r\n    \"description\": \"Studio sản xuất phim của Disney.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}movie-studio/1",
+									"host": [
+										"{{url}}movie-studio"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá hãng phim",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}movie-studio/1",
+									"host": [
+										"{{url}}movie-studio"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Show time",
+					"item": [
+						{
+							"name": "All xuất chiếu",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}showtime/getAll",
+									"host": [
+										"{{url}}showtime"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All xuất chiếu Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}showtime?page=1&limit=10",
+									"host": [
+										"{{url}}showtime"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 xuất chiếu",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}showtime/1",
+									"host": [
+										"{{url}}showtime"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm xuất chiếu",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"startTime\": \"2023-10-10T03:00:00.000+00:00\",\r\n    \"endTime\": \"2023-10-10T05:00:00.000+00:00\",\r\n    \"status\": 1,\r\n    \"movie\": {\r\n        \"id\": 1,\r\n        \"title\": \"Avengers: Endgame1\",\r\n        \"description\": \"Cuộc chiến cuối cùng của siêu anh hùng Marvel\",\r\n        \"duration\": \"02:33:00\",\r\n        \"releaseDate\": \"2019-04-25T17:00:00.000+00:00\",\r\n        \"country\": \"United States\",\r\n        \"rating\": 8.4,\r\n        \"videoTrailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\r\n        \"movieStudio\": {\r\n            \"id\": 1,\r\n            \"name\": \"Walt Disney Pictures\",\r\n            \"country\": \"Hoa Kỳ\",\r\n            \"email\": \"tuhieu@disney.com\",\r\n            \"description\": \"Studio sản xuất phim của Disney.\"\r\n        },\r\n        \"mpaaRating\": {\r\n            \"id\": 3,\r\n            \"ratingCode\": \"PG-13\",\r\n            \"icon\": \"PG-13_icon.png\",\r\n            \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n        }\r\n    },\r\n    \"cinema\": {\r\n        \"id\": 1,\r\n        \"name\": \"Cinema 1\",\r\n        \"status\": true,\r\n        \"cinemaType\": {\r\n            \"id\": 1,\r\n            \"typeName\": \"Regular\",\r\n            \"description\": \"Standard cinema with regular amenities.\"\r\n        },\r\n        \"cinemaComplex\": {\r\n            \"id\": 1,\r\n            \"name\": \"Standard Cinema Complex\",\r\n            \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n            \"phone\": \"0192949422\",\r\n            \"openingTime\": \"08:00:00\",\r\n            \"closingTime\": \"22:00:00\",\r\n            \"province\": {\r\n                \"id\": 2,\r\n                \"name\": \"Hồ Chí Minh\"\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}showtime",
+									"host": [
+										"{{url}}showtime"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa xuất chiếu",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"startTime\": \"2023-10-10T03:00:00.000+00:00\",\r\n    \"endTime\": \"2023-10-10T05:00:00.000+00:00\",\r\n    \"status\": 0,\r\n    \"movie\": {\r\n        \"id\": 1,\r\n        \"title\": \"Avengers: Endgame\",\r\n        \"description\": \"Cuộc chiến cuối cùng của siêu anh hùng Marvel\",\r\n        \"duration\": \"02:33:00\",\r\n        \"releaseDate\": \"2019-04-25T17:00:00.000+00:00\",\r\n        \"country\": \"United States\",\r\n        \"rating\": 8.4,\r\n        \"videoTrailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\r\n        \"movieStudio\": {\r\n            \"id\": 1,\r\n            \"name\": \"Walt Disney Pictures\",\r\n            \"country\": \"Hoa Kỳ\",\r\n            \"email\": \"tuhieu@disney.com\",\r\n            \"description\": \"Studio sản xuất phim của Disney.\"\r\n        },\r\n        \"mpaaRating\": {\r\n            \"id\": 3,\r\n            \"ratingCode\": \"PG-13\",\r\n            \"icon\": \"PG-13_icon.png\",\r\n            \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n        }\r\n    },\r\n    \"cinema\": {\r\n        \"id\": 1,\r\n        \"name\": \"Cinema 1\",\r\n        \"status\": true,\r\n        \"cinemaType\": {\r\n            \"id\": 1,\r\n            \"typeName\": \"Regular\",\r\n            \"description\": \"Standard cinema with regular amenities.\"\r\n        },\r\n        \"cinemaComplex\": {\r\n            \"id\": 1,\r\n            \"name\": \"Standard Cinema Complex\",\r\n            \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n            \"phone\": \"0192949422\",\r\n            \"openingTime\": \"08:00:00\",\r\n            \"closingTime\": \"22:00:00\",\r\n            \"province\": {\r\n                \"id\": 2,\r\n                \"name\": \"Hồ Chí Minh\"\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}showtime/1",
+									"host": [
+										"{{url}}showtime"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá xuất chiếu",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}showtime/1",
+									"host": [
+										"{{url}}showtime"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Actor",
+					"item": [
+						{
+							"name": "All diễn viên",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}actor/getAll",
+									"host": [
+										"{{url}}actor"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All diễn viên By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}actor?page=0",
+									"host": [
+										"{{url}}actor"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 diễn viên",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}actor/1",
+									"host": [
+										"{{url}}actor"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm diễn viên",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullname\": \"Nguyễn Văn Thanh\",\r\n    \"birthday\": \"1990-01-01\",\r\n    \"avatar\": \"actor_image1.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}actor",
+									"host": [
+										"{{url}}actor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa diễn viên",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"fullname\": \"Nguyễn Văn Thanh\",\r\n    \"birthday\": \"1990-01-01\",\r\n    \"avatar\": \"actor_image1.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}actor/1",
+									"host": [
+										"{{url}}actor"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá diễn viên",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}actor/1",
+									"host": [
+										"{{url}}actor"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Director",
+					"item": [
+						{
+							"name": "All đạo diễn",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}director/getAll",
+									"host": [
+										"{{url}}director"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All đạo diễn By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}director?page=1&limit=10",
+									"host": [
+										"{{url}}director"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 đạo diễn",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}director/1",
+									"host": [
+										"{{url}}director"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm đạo diễn",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullname\": \"Nguy?n Th? A\",\r\n    \"birthday\": \"1980-05-14T17:00:00.000+00:00\",\r\n    \"avatar\": \"director_avatar1.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}director",
+									"host": [
+										"{{url}}director"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa đạo diễn",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"fullname\": \"Nguyễn Thị A\",\r\n    \"birthday\": \"1980-05-14T17:00:00.000+00:00\",\r\n    \"avatar\": \"director_avatar1.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}director/1",
+									"host": [
+										"{{url}}director"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá đạo diễn",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}director/1",
+									"host": [
+										"{{url}}director"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Format",
+					"item": [
+						{
+							"name": "All định dạng",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}format",
+									"host": [
+										"{{url}}format"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 định dạng",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}format/1",
+									"host": [
+										"{{url}}format"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm định dạng",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"2D\",\r\n    \"description\": \"Phim 2D thường được chiếu trên màn hình phẳng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}format",
+									"host": [
+										"{{url}}format"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa định dạng",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"2D\",\r\n    \"description\": \"Phim 2D thường được chiếu trên màn hình phẳng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}format/1",
+									"host": [
+										"{{url}}format"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá định dạng",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}format/11",
+									"host": [
+										"{{url}}format"
+									],
+									"path": [
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Quản lí ghế",
+			"item": [
+				{
+					"name": "Seat",
+					"item": [
+						{
+							"name": "All ghế",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seat",
+									"host": [
+										"{{url}}seat"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 ghế",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seat/1",
+									"host": [
+										"{{url}}seat"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm ghế",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seat",
+									"host": [
+										"{{url}}seat"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa ghế",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seat/1",
+									"host": [
+										"{{url}}seat"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá ghế",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seat/1",
+									"host": [
+										"{{url}}seat"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Seat type",
+					"item": [
+						{
+							"name": "All loại ghế",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seatType/getAll",
+									"host": [
+										"{{url}}seatType"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All loại ghế By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seatType?page=1&limit=10",
+									"host": [
+										"{{url}}seatType"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 loại ghế",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seatType/1",
+									"host": [
+										"{{url}}seatType"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm loại ghế",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ghế thông thường\",\r\n    \"image\": \"url_anh_ghethongthuong.jpg\",\r\n    \"description\": \"Loại ghế thông thường sử dụng cho tất cả khách hàng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}seatType",
+									"host": [
+										"{{url}}seatType"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa loại ghế",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"Ghế thông thường\",\r\n    \"image\": \"url_anh_ghethongthuong.jpg\",\r\n    \"description\": \"Loại ghế thông thường sử dụng cho tất cả khách hàng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}seatType/10",
+									"host": [
+										"{{url}}seatType"
+									],
+									"path": [
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá loại ghế",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}seatType/10",
+									"host": [
+										"{{url}}seatType"
+									],
+									"path": [
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Quản lí combo và sự kiện",
+			"item": [
+				{
+					"name": "Service",
+					"item": [
+						{
+							"name": "All combo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}service/getAll",
+									"host": [
+										"{{url}}service"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All combo By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}service",
+									"host": [
+										"{{url}}service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 combo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}service/1",
+									"host": [
+										"{{url}}service"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm combo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Tiện ích ẩm thực và đồ uống\",\r\n    \"description\": \"Tận hưởng đa dạng các loại đồ ăn nhẹ và đồ uống trong suốt buổi chiếu phim.\",\r\n    \"image\": \"food.jpg\",\r\n    \"cinemaComplex\": {\r\n        \"id\": 1,\r\n        \"name\": \"Standard Cinema Complex\",\r\n        \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n        \"phone\": \"0192949422\",\r\n        \"openingTime\": \"08:00:00\",\r\n        \"closingTime\": \"22:00:00\",\r\n        \"province\": {\r\n            \"id\": 2,\r\n            \"name\": \"Hồ Chí Minh\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}service",
+									"host": [
+										"{{url}}service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa combo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Tiện ích ẩm thực và đồ uống\",\r\n    \"description\": \"Tận hưởng đa dạng các loại đồ ăn nhẹ và đồ uống trong suốt buổi chiếu phim.\",\r\n    \"image\": \"food.jpg\",\r\n    \"cinemaComplex\": {\r\n        \"id\": 1,\r\n        \"name\": \"Standard Cinema Complex\",\r\n        \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n        \"phone\": \"0192949422\",\r\n        \"openingTime\": \"08:00:00\",\r\n        \"closingTime\": \"22:00:00\",\r\n        \"province\": {\r\n            \"id\": 2,\r\n            \"name\": \"Hồ Chí Minh\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}service/1",
+									"host": [
+										"{{url}}service"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá combo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}service/1",
+									"host": [
+										"{{url}}service"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Discount",
+					"item": [
+						{
+							"name": "All giảm giá",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}discount",
+									"host": [
+										"{{url}}discount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 giảm giá",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}discount/1",
+									"host": [
+										"{{url}}discount"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm giảm giá",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}discount",
+									"host": [
+										"{{url}}discount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa giảm giá",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}discount/1",
+									"host": [
+										"{{url}}discount"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá giảm giá",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}discount/1",
+									"host": [
+										"{{url}}discount"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Event",
+					"item": [
+						{
+							"name": "All sự kiện",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}event",
+									"host": [
+										"{{url}}event"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 sự kiện",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}event/8",
+									"host": [
+										"{{url}}event"
+									],
+									"path": [
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm sự kiện",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sự kiện Buổi ra mắt phim mới\",\r\n    \"description\": \"Rạp phim thường tổ chức buổi ra mắt các bộ phim mới với sự kiện đặc biệt, bao gồm việc mời các diễn viên và đạo diễn tham dự.\",\r\n    \"startDate\": \"2023-11-30T17:00:00.000+00:00\",\r\n    \"endDate\": \"2023-12-04T17:00:00.000+00:00\",\r\n    \"banner\": \"bannerA.jpg\",\r\n    \"status\": true,\r\n    \"cinemaComplex\": {\r\n        \"id\": 1,\r\n        \"name\": \"Standard Cinema Complex\",\r\n        \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n        \"phone\": \"0192949422\",\r\n        \"openingTime\": \"08:00:00\",\r\n        \"closingTime\": \"22:00:00\",\r\n        \"province\": {\r\n            \"id\": 2,\r\n            \"name\": \"Hồ Chí Minh\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}event",
+									"host": [
+										"{{url}}event"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa sự kiện",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Sự kiện Buổi ra mắt phim mới\",\r\n    \"description\": \"Rạp phim thường tổ chức buổi ra mắt các bộ phim mới với sự kiện đặc biệt, bao gồm việc mời các diễn viên và đạo diễn tham dự.\",\r\n    \"startDate\": \"2023-11-30T17:00:00.000+00:00\",\r\n    \"endDate\": \"2023-12-04T17:00:00.000+00:00\",\r\n    \"banner\": \"bannerA.jpg\",\r\n    \"status\": true,\r\n    \"cinemaComplex\": {\r\n        \"id\": 1,\r\n        \"name\": \"Standard Cinema Complex\",\r\n        \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n        \"phone\": \"0192949422\",\r\n        \"openingTime\": \"08:00:00\",\r\n        \"closingTime\": \"22:00:00\",\r\n        \"province\": {\r\n            \"id\": 2,\r\n            \"name\": \"Hồ Chí Minh\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}event/8",
+									"host": [
+										"{{url}}event"
+									],
+									"path": [
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá sự kiện",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}event/1",
+									"host": [
+										"{{url}}event"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Quản lí người dùng",
+			"item": [
+				{
+					"name": "All người dùng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}account/getAll",
+							"host": [
+								"{{url}}account"
+							],
+							"path": [
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All người dùng By Page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}account?page=1&limit=10&active=false&search=",
+							"host": [
+								"{{url}}account"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "active",
+									"value": "false"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get 1 người dùng",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}account/0994949994",
+							"host": [
+								"{{url}}account"
+							],
+							"path": [
+								"0994949994"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sửa actice",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"active\": false\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}account/active/0866602116",
+							"host": [
+								"{{url}}account"
+							],
+							"path": [
+								"active",
+								"0866602116"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sửa thông tin người dùng",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"a\",\r\n    \"birthday\": \"2000-23-03\",\r\n    \"gender\": false,\r\n    \"email\": \"c\",\r\n    \"image\": \"D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}account/infoUser/0866602116",
+							"host": [
+								"{{url}}account"
+							],
+							"path": [
+								"infoUser",
+								"0866602116"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Thêm người dùng",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sửa người dùng",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"0994949994\",\r\n    \"fullname\": \"Nguyễn Hoàng Dinh\",\r\n    \"email\": \"Dinh@gmail.com\",\r\n    \"password\": \"dinh069\",\r\n    \"birthday\": \"2003-09-23T17:00:00.000+00:00\",\r\n    \"gender\": false,\r\n    \"image\": \"profile_image.jpg\",\r\n    \"role\": false,\r\n    \"active\": true,\r\n    \"verified\": true,\r\n    \"points\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}account/0994949994",
+							"host": [
+								"{{url}}account"
+							],
+							"path": [
+								"0994949994"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xoá đạo diễn Copy 6",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Individually",
+			"item": [
+				{
+					"name": "Booking",
+					"item": [
+						{
+							"name": "All đặt vé",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}booking",
+									"host": [
+										"{{url}}booking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 đặt vé",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}booking/booking1",
+									"host": [
+										"{{url}}booking"
+									],
+									"path": [
+										"booking1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm đặt vé",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\": {\r\n        \"phone\": \"0866602116\",\r\n        \"fullname\": \"Phùng Tự Hiếu\",\r\n        \"email\": \"hieuphung@gmail.com\",\r\n        \"password\": \"tuhieu123\",\r\n        \"birthday\": \"2003-11-10T17:00:00.000+00:00\",\r\n        \"gender\": true,\r\n        \"role\": true,\r\n        \"active\": true,\r\n        \"verified\": true,\r\n        \"points\": 1000\r\n    },\r\n    \"createDate\": \"2023-10-10T02:30:00.000+00:00\",\r\n    \"showtime\": {\r\n        \"id\": 1,\r\n        \"startTime\": \"2023-10-10T03:00:00.000+00:00\",\r\n        \"endTime\": \"2023-10-10T05:00:00.000+00:00\",\r\n        \"status\": 0,\r\n        \"movie\": {\r\n            \"id\": 1,\r\n            \"title\": \"Avengers: Endgame1\",\r\n            \"description\": \"Cuộc chiến cuối cùng của siêu anh hùng Marvel\",\r\n            \"duration\": \"02:33:00\",\r\n            \"releaseDate\": \"2019-04-25T17:00:00.000+00:00\",\r\n            \"country\": \"United States\",\r\n            \"rating\": 8.4,\r\n            \"videoTrailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\r\n            \"movieStudio\": {\r\n                \"id\": 1,\r\n                \"name\": \"Walt Disney Pictures\",\r\n                \"country\": \"Hoa Kỳ\",\r\n                \"email\": \"tuhieu@disney.com\",\r\n                \"description\": \"Studio sản xuất phim của Disney.\"\r\n            },\r\n            \"mpaaRating\": {\r\n                \"id\": 3,\r\n                \"ratingCode\": \"PG-13\",\r\n                \"icon\": \"PG-13_icon.png\",\r\n                \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n            }\r\n        },\r\n        \"cinema\": {\r\n            \"id\": 1,\r\n            \"name\": \"Cinema 1\",\r\n            \"status\": true,\r\n            \"cinemaType\": {\r\n                \"id\": 1,\r\n                \"typeName\": \"Regular\",\r\n                \"description\": \"Standard cinema with regular amenities.\"\r\n            },\r\n            \"cinemaComplex\": {\r\n                \"id\": 1,\r\n                \"name\": \"Standard Cinema Complex\",\r\n                \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n                \"phone\": \"0192949422\",\r\n                \"openingTime\": \"08:00:00\",\r\n                \"closingTime\": \"22:00:00\",\r\n                \"province\": {\r\n                    \"id\": 2,\r\n                    \"name\": \"Hồ Chí Minh\"\r\n                }\r\n            }\r\n        }\r\n    },\r\n    \"servicesBookings\": [],\r\n    \"paymentInfos\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}booking",
+									"host": [
+										"{{url}}booking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa định dạng Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"2D\",\r\n    \"description\": \"Phim 2D thường được chiếu trên màn hình phẳng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}format/1",
+									"host": [
+										"{{url}}format"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá định dạng Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}format/11",
+									"host": [
+										"{{url}}format"
+									],
+									"path": [
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Genre",
+					"item": [
+						{
+							"name": "All thể loại",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}genre",
+									"host": [
+										"{{url}}genre"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 thể loại",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}genre/1",
+									"host": [
+										"{{url}}genre"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm thể loại",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Hành động\",\r\n    \"description\": \"Phim hành động thường có nhiều cảnh hỗn loạn, võ thuật, và hành động kịch tính. Chúng thường xoay quanh các nhân vật chống lại kẻ thù hoặc giải quyết vấn đề bằng cách sử dụng bạo lực hoặc kỹ năng chiến đấu.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}genre",
+									"host": [
+										"{{url}}genre"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa thể loại",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 11,\r\n    \"name\": \"Hành độn2g\",\r\n    \"description\": \"Phim hành động thường có nhiều cảnh hỗn loạn, võ thuật, và hành động kịch tính. Chúng thường xoay quanh các nhân vật chống lại kẻ thù hoặc giải quyết vấn đề bằng cách sử dụng bạo lực hoặc kỹ năng chiến đấu.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}genre/1",
+									"host": [
+										"{{url}}genre"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá thể loại",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}genre/10",
+									"host": [
+										"{{url}}genre"
+									],
+									"path": [
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "mpaaRating",
+					"item": [
+						{
+							"name": "All mpaaRating",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}mpaaRating",
+									"host": [
+										"{{url}}mpaaRating"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 mpaaRating",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}mpaaRating/1",
+									"host": [
+										"{{url}}mpaaRating"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm mpaaRating",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"2D\",\r\n    \"description\": \"Phim 2D thường được chiếu trên màn hình phẳng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}mpaaRating",
+									"host": [
+										"{{url}}mpaaRating"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa mpaaRating",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 13,\r\n    \"name\": \"2D\",\r\n    \"description\": \"Phim 2D thường được chiếu trên màn hình phẳng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}mpaaRating/1",
+									"host": [
+										"{{url}}mpaaRating"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá mpaaRating",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}mpaaRating/11",
+									"host": [
+										"{{url}}mpaaRating"
+									],
+									"path": [
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PriceService",
+					"item": [
+						{
+							"name": "All giá dịch vụ",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}price-service/getAll",
+									"host": [
+										"{{url}}price-service"
+									],
+									"path": [
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All giá dịch vụ By Page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}price-service?page1&limit=10",
+									"host": [
+										"{{url}}price-service"
+									],
+									"query": [
+										{
+											"key": "page1",
+											"value": null
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 giá dịch vụ",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}price-service/1",
+									"host": [
+										"{{url}}price-service"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm giá dịch vụ",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\": 50000.0,\r\n    \"startDate\": \"2023-10-04T17:00:00.000+00:00\",\r\n    \"endDate\": \"2023-10-30T17:00:00.000+00:00\",\r\n    \"service\": {\r\n        \"id\": 1,\r\n        \"name\": \"Tiện ích ẩm thực và đồ uống\",\r\n        \"description\": \"Tận hưởng đa dạng các loại đồ ăn nhẹ và đồ uống trong suốt buổi chiếu phim.\",\r\n        \"image\": \"food.jpg\",\r\n        \"cinemaComplex\": {\r\n            \"id\": 1,\r\n            \"name\": \"Standard Cinema Complex\",\r\n            \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n            \"phone\": \"0192949422\",\r\n            \"openingTime\": \"08:00:00\",\r\n            \"closingTime\": \"22:00:00\",\r\n            \"province\": {\r\n                \"id\": 2,\r\n                \"name\": \"Hồ Chí Minh\"\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}price-service",
+									"host": [
+										"{{url}}price-service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa giá dịch vụ",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 14,\r\n    \"price\": 520000.0,\r\n    \"startDate\": \"2023-10-04T17:00:00.000+00:00\",\r\n    \"endDate\": \"2023-10-30T17:00:00.000+00:00\",\r\n    \"service\": {\r\n        \"id\": 1,\r\n        \"name\": \"Tiện ích ẩm thực và đồ uống\",\r\n        \"description\": \"Tận hưởng đa dạng các loại đồ ăn nhẹ và đồ uống trong suốt buổi chiếu phim.\",\r\n        \"image\": \"food.jpg\",\r\n        \"cinemaComplex\": {\r\n            \"id\": 1,\r\n            \"name\": \"Standard Cinema Complex\",\r\n            \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n            \"phone\": \"0192949422\",\r\n            \"openingTime\": \"08:00:00\",\r\n            \"closingTime\": \"22:00:00\",\r\n            \"province\": {\r\n                \"id\": 2,\r\n                \"name\": \"Hồ Chí Minh\"\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}price-service/14",
+									"host": [
+										"{{url}}price-service"
+									],
+									"path": [
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá giá dịch vụ",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}price-service/14",
+									"host": [
+										"{{url}}price-service"
+									],
+									"path": [
+										"14"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Price",
+					"item": [
+						{
+							"name": "All giá",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}price",
+									"host": [
+										"{{url}}price"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 giá",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}price/1",
+									"host": [
+										"{{url}}price"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm giá",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"weekdayPrice\": 100000.0,\r\n    \"weekendPrice\": 120000.0,\r\n    \"startDate\": \"2022-12-30T17:00:00.000+00:00\",\r\n    \"endDate\": \"2023-01-20T17:00:00.000+00:00\",\r\n    \"status\": true,\r\n    \"seatType\": {\r\n        \"id\": 1,\r\n        \"name\": \"Ghế thông thường\",\r\n        \"image\": \"url_anh_ghethongthuong.jpg\",\r\n        \"description\": \"Loại ghế thông thường sử dụng cho tất cả khách hàng.\"\r\n    },\r\n    \"movie\": {\r\n        \"id\": 2,\r\n        \"title\": \"The Dark Knight\",\r\n        \"description\": \"Huyền thoại về Người Dơi và The Joker\",\r\n        \"duration\": \"01:43:00\",\r\n        \"releaseDate\": \"2008-07-17T17:00:00.000+00:00\",\r\n        \"country\": \"United States\",\r\n        \"rating\": 9.0,\r\n        \"videoTrailer\": \"https://www.youtube.com/watch?v=yQ5U8suTUw0\",\r\n        \"movieStudio\": {\r\n            \"id\": 2,\r\n            \"name\": \"Warner Bros. Pictures\",\r\n            \"country\": \"Hoa Kỳ\",\r\n            \"email\": \"phungtuhieut@warnerbros.com\",\r\n            \"description\": \"Studio sản xuất phim của Warner Bros.\"\r\n        },\r\n        \"mpaaRating\": {\r\n            \"id\": 3,\r\n            \"ratingCode\": \"PG-13\",\r\n            \"icon\": \"PG-13_icon.png\",\r\n            \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n        }\r\n    },\r\n    \"cinemaComplex\": {\r\n        \"id\": 1,\r\n        \"name\": \"Standard Cinema Complex\",\r\n        \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n        \"phone\": \"0192949422\",\r\n        \"openingTime\": \"08:00:00\",\r\n        \"closingTime\": \"22:00:00\",\r\n        \"province\": {\r\n            \"id\": 2,\r\n            \"name\": \"Hồ Chí Minh\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}price",
+									"host": [
+										"{{url}}price"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa giá",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 25,\r\n    \"weekdayPrice\": 100000.0,\r\n    \"weekendPrice\": 120000.0,\r\n    \"startDate\": \"2022-12-30T17:00:00.000+00:00\",\r\n    \"endDate\": \"2023-01-20T17:00:00.000+00:00\",\r\n    \"status\": true,\r\n    \"seatType\": {\r\n        \"id\": 1,\r\n        \"name\": \"Ghế thông thường\",\r\n        \"image\": \"url_anh_ghethongthuong.jpg\",\r\n        \"description\": \"Loại ghế thông thường sử dụng cho tất cả khách hàng.\"\r\n    },\r\n    \"movie\": {\r\n        \"id\": 2,\r\n        \"title\": \"The Dark Knight\",\r\n        \"description\": \"Huyền thoại về Người Dơi và The Joker\",\r\n        \"duration\": \"01:43:00\",\r\n        \"releaseDate\": \"2008-07-17T17:00:00.000+00:00\",\r\n        \"country\": \"United States\",\r\n        \"rating\": 9.0,\r\n        \"videoTrailer\": \"https://www.youtube.com/watch?v=yQ5U8suTUw0\",\r\n        \"movieStudio\": {\r\n            \"id\": 2,\r\n            \"name\": \"Warner Bros. Pictures\",\r\n            \"country\": \"Hoa Kỳ\",\r\n            \"email\": \"phungtuhieut@warnerbros.com\",\r\n            \"description\": \"Studio sản xuất phim của Warner Bros.\"\r\n        },\r\n        \"mpaaRating\": {\r\n            \"id\": 3,\r\n            \"ratingCode\": \"PG-13\",\r\n            \"icon\": \"PG-13_icon.png\",\r\n            \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n        }\r\n    },\r\n    \"cinemaComplex\": {\r\n        \"id\": 1,\r\n        \"name\": \"Standard Cinema Complex\",\r\n        \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n        \"phone\": \"0192949422\",\r\n        \"openingTime\": \"08:00:00\",\r\n        \"closingTime\": \"22:00:00\",\r\n        \"province\": {\r\n            \"id\": 2,\r\n            \"name\": \"Hồ Chí Minh\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}price/25",
+									"host": [
+										"{{url}}price"
+									],
+									"path": [
+										"25"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá giá",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}price/25",
+									"host": [
+										"{{url}}price"
+									],
+									"path": [
+										"25"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Review",
+					"item": [
+						{
+							"name": "All review",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}review",
+									"host": [
+										"{{url}}review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 review",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}review/1",
+									"host": [
+										"{{url}}review"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"comment\": \"Ðánh giá phim r?t hay!\",\r\n    \"rating\": 5.0,\r\n    \"createDate\": \"2023-10-20T01:30:00.000+00:00\",\r\n    \"editDate\": \"2023-10-20T01:30:00.000+00:00\",\r\n    \"account\": {\r\n        \"phone\": \"0866602116\",\r\n        \"fullname\": \"Phùng Tự Hiếu\",\r\n        \"email\": \"hieuphung@gmail.com\",\r\n        \"password\": \"tuhieu123\",\r\n        \"birthday\": \"2003-11-10T17:00:00.000+00:00\",\r\n        \"gender\": true,\r\n        \"role\": true,\r\n        \"active\": true,\r\n        \"verified\": true,\r\n        \"points\": 1000\r\n    },\r\n    \"movie\": {\r\n        \"id\": 1,\r\n        \"title\": \"Avengers: Endgame1\",\r\n        \"description\": \"Cuộc chiến cuối cùng của siêu anh hùng Marvel\",\r\n        \"duration\": \"02:33:00\",\r\n        \"releaseDate\": \"2019-04-25T17:00:00.000+00:00\",\r\n        \"country\": \"United States\",\r\n        \"rating\": 8.4,\r\n        \"videoTrailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\r\n        \"movieStudio\": {\r\n            \"id\": 1,\r\n            \"name\": \"Walt Disney Pictures\",\r\n            \"country\": \"Hoa Kỳ\",\r\n            \"email\": \"tuhieu@disney.com\",\r\n            \"description\": \"Studio sản xuất phim của Disney.\"\r\n        },\r\n        \"mpaaRating\": {\r\n            \"id\": 3,\r\n            \"ratingCode\": \"PG-13\",\r\n            \"icon\": \"PG-13_icon.png\",\r\n            \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}review",
+									"host": [
+										"{{url}}review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa review",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4,\r\n    \"comment\": \"Ðánh giá phim r?t hay1!\",\r\n    \"rating\": 5.0,\r\n    \"createDate\": \"2023-10-20T01:30:00.000+00:00\",\r\n    \"editDate\": \"2023-10-20T01:30:00.000+00:00\",\r\n    \"account\": {\r\n        \"phone\": \"0866602116\",\r\n        \"fullname\": \"Phùng Tự Hiếu\",\r\n        \"email\": \"hieuphung@gmail.com\",\r\n        \"password\": \"tuhieu123\",\r\n        \"birthday\": \"2003-11-10T17:00:00.000+00:00\",\r\n        \"gender\": true,\r\n        \"role\": true,\r\n        \"active\": true,\r\n        \"verified\": true,\r\n        \"points\": 1000\r\n    },\r\n    \"movie\": {\r\n        \"id\": 1,\r\n        \"title\": \"Avengers: Endgame1\",\r\n        \"description\": \"Cuộc chiến cuối cùng của siêu anh hùng Marvel\",\r\n        \"duration\": \"02:33:00\",\r\n        \"releaseDate\": \"2019-04-25T17:00:00.000+00:00\",\r\n        \"country\": \"United States\",\r\n        \"rating\": 8.4,\r\n        \"videoTrailer\": \"https://www.youtube.com/watch?v=TcMBFSGVi1c\",\r\n        \"movieStudio\": {\r\n            \"id\": 1,\r\n            \"name\": \"Walt Disney Pictures\",\r\n            \"country\": \"Hoa Kỳ\",\r\n            \"email\": \"tuhieu@disney.com\",\r\n            \"description\": \"Studio sản xuất phim của Disney.\"\r\n        },\r\n        \"mpaaRating\": {\r\n            \"id\": 3,\r\n            \"ratingCode\": \"PG-13\",\r\n            \"icon\": \"PG-13_icon.png\",\r\n            \"description\": \"Không phù hợp cho trẻ dưới 13 tuổi.\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}review/4",
+									"host": [
+										"{{url}}review"
+									],
+									"path": [
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá review",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}review/4",
+									"host": [
+										"{{url}}review"
+									],
+									"path": [
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PaymentInfo",
+					"item": [
+						{
+							"name": "All paymentInfo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}paymentInfo",
+									"host": [
+										"{{url}}paymentInfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 paymentInfo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}paymentInfo/1",
+									"host": [
+										"{{url}}paymentInfo"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm paymentInfo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"2D\",\r\n    \"description\": \"Phim 2D thường được chiếu trên màn hình phẳng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}paymentInfo",
+									"host": [
+										"{{url}}paymentInfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa paymentInfo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"2D\",\r\n    \"description\": \"Phim 2D thường được chiếu trên màn hình phẳng.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}paymentInfo/1",
+									"host": [
+										"{{url}}paymentInfo"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá paymentInfo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}paymentInfo/11",
+									"host": [
+										"{{url}}paymentInfo"
+									],
+									"path": [
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Verification",
+					"item": [
+						{
+							"name": "All xác thật",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}verification",
+									"host": [
+										"{{url}}verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get 1 xác thật",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}verification/1",
+									"host": [
+										"{{url}}verification"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm xác thật",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountId\": \"0393618987\",\r\n    \"code\": \"abc123\",\r\n    \"createdAt\": \"2023-10-05T01:00:00.000+00:00\",\r\n    \"expiresAt\": \"2023-10-10T01:00:00.000+00:00\",\r\n    \"active\": true,\r\n    \"account\": {\r\n        \"phone\": \"0393618987\",\r\n        \"fullname\": \"Nguyễn Nhựt Đông\",\r\n        \"email\": \"nhutdong@email.com\",\r\n        \"password\": \"dong444\",\r\n        \"birthday\": \"2003-08-20T17:00:00.000+00:00\",\r\n        \"gender\": true,\r\n        \"role\": true,\r\n        \"active\": true,\r\n        \"verified\": true,\r\n        \"points\": 1000\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}verification",
+									"host": [
+										"{{url}}verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa xác thật",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5,\r\n    \"accountId\": \"0393618987\",\r\n    \"code\": \"abc332\",\r\n    \"createdAt\": \"2023-10-05T01:00:00.000+00:00\",\r\n    \"expiresAt\": \"2023-10-10T01:00:00.000+00:00\",\r\n    \"active\": true,\r\n    \"account\": {\r\n        \"phone\": \"0393618987\",\r\n        \"fullname\": \"Nguyễn Nhựt Đông\",\r\n        \"email\": \"nhutdong@email.com\",\r\n        \"password\": \"dong444\",\r\n        \"birthday\": \"2003-08-20T17:00:00.000+00:00\",\r\n        \"gender\": true,\r\n        \"role\": true,\r\n        \"active\": true,\r\n        \"verified\": true,\r\n        \"points\": 1000\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}verification/5",
+									"host": [
+										"{{url}}verification"
+									],
+									"path": [
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá xác thật",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}verification/5",
+									"host": [
+										"{{url}}verification"
+									],
+									"path": [
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "Upload",
+					"item": [
+						{
+							"name": "Get 1 ảnh",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}upload/57552451-6b6b-4fa7-8576-4b079ab341e4_woman.png",
+									"host": [
+										"{{url}}upload"
+									],
+									"path": [
+										"57552451-6b6b-4fa7-8576-4b079ab341e4_woman.png"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Thêm ảnh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file_to_upload",
+											"type": "file",
+											"src": "/C:/Users/MSI PC/Downloads/3.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}upload",
+									"host": [
+										"{{url}}upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sửa ảnh",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Sự kiện Buổi ra mắt phim mới\",\r\n    \"description\": \"Rạp phim thường tổ chức buổi ra mắt các bộ phim mới với sự kiện đặc biệt, bao gồm việc mời các diễn viên và đạo diễn tham dự.\",\r\n    \"startDate\": \"2023-11-30T17:00:00.000+00:00\",\r\n    \"endDate\": \"2023-12-04T17:00:00.000+00:00\",\r\n    \"banner\": \"bannerA.jpg\",\r\n    \"status\": true,\r\n    \"cinemaComplex\": {\r\n        \"id\": 1,\r\n        \"name\": \"Standard Cinema Complex\",\r\n        \"address\": \"123 Park Street, Quận 1, Thành phố Hồ Chí Minh\",\r\n        \"phone\": \"0192949422\",\r\n        \"openingTime\": \"08:00:00\",\r\n        \"closingTime\": \"22:00:00\",\r\n        \"province\": {\r\n            \"id\": 2,\r\n            \"name\": \"Hồ Chí Minh\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}upload/57552451-6b6b-4fa7-8576-4b079ab341e4_woman.png",
+									"host": [
+										"{{url}}upload"
+									],
+									"path": [
+										"57552451-6b6b-4fa7-8576-4b079ab341e4_woman.png"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá ảnh",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}upload/57552451-6b6b-4fa7-8576-4b079ab341e4_woman.png",
+									"host": [
+										"{{url}}upload"
+									],
+									"path": [
+										"57552451-6b6b-4fa7-8576-4b079ab341e4_woman.png"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Statistics",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url\n",
+			"value": "http://localhost:8081/api/",
+			"type": "string"
+		}
+	]
+}

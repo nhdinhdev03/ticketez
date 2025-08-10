@@ -1,0 +1,21 @@
+// .title {
+//     font-family: 'Quicksand', sans-serif;
+//     font-size: 1.6rem;
+//     line-height: 1.5;
+//     text-rendering: optimizeSpeed;
+// }
+.wrap-act-top-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-form-studio {
+    font-family: var(--font-family) !important;
+}
+.table-link-video {
+    color: var(--primary-color);
+    &:hover {
+        text-decoration: underline;
+    }
+}

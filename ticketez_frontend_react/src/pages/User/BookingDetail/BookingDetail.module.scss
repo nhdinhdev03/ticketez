@@ -1,0 +1,71 @@
+.wrapper {
+    all: initial;
+}
+.content-info-details {
+    padding-top: 6px;
+}
+.wrapp-title-movie {
+    display: flex;
+    align-items: center;
+}
+.divider-custom {
+    margin: 10px 0px 5px 0px;
+}
+.title-movie {
+    margin: 0px 0px;
+}
+.mpaa-movie {
+    min-width: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.wrapp-info-details {
+    padding-left: 0px;
+    margin: 10px 0px 5px 0px;
+}
+
+.label-inner {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+.info-inner {
+    font-size: 1.4rem;
+}
+.address-cinema-complex {
+    margin: 0px 0px;
+    line-height: 1.7rem;
+    font-size: 1.25rem;
+}
+.discount-info {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.seat-price {
+    display: flex;
+    align-items: end;
+}
+
+.wrapp-pay-area {
+    // border-left: 1px solid #e1e1e1;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 420px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.wrapp-pay-area-inner {
+    padding-left: 15px;
+    width: 280px;
+}
+.form-item {
+    margin-bottom: 15px !important;
+}
+// .qrcode-custom {
+//     background-color: white !important;
+// }

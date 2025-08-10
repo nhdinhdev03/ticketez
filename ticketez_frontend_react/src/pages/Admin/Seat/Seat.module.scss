@@ -1,0 +1,21 @@
+.card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px !important;
+}
+.col-first {
+    display: flex;
+    align-items: center;
+}
+.select {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 80vh; /* Điều này giúp hạn chế chiều cao tối đa của modal */
+    overflow-y: auto; /* Kích hoạt thanh cuộn nếu nội dung quá dài */
+    width: auto;
+    max-width: 100%;
+  }

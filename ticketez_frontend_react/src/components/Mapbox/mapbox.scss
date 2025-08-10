@@ -1,0 +1,33 @@
+.popup {
+    padding-top: 100px;
+}
+
+.mapboxgl-popup-content{
+    width: 225px;
+}
+
+.mapboxgl-popup-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    padding: 5px 10px;
+    right: 0px;
+    color: black;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(241, 241, 241);
+    }
+}
+.title {
+    font-size: 14px;
+    color: #262626;
+    font-weight: 500;
+}
+.address {
+    color: #737373;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

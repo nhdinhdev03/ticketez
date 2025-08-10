@@ -1,0 +1,236 @@
+.body {
+    font-family: var(--font-family);
+}
+.carouselTitle {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    margin-top: 10px;
+}
+
+.slide {
+    padding-right: 10px;
+}
+
+.slide:last-child {
+    padding-right: 0;
+}
+
+.slide img {
+    display: block;
+}
+.slide img:hover {
+    transform: 1.1;
+}
+
+.slick-list {
+    margin: 0 15px;
+}
+
+.control-btn button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #e5e5e5;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.control-btn .next {
+    position: absolute;
+    top: 35%;
+    right: 1%;
+}
+
+.control-btn .prev {
+    position: absolute;
+    top: 35%;
+    left: -1.9%;
+    z-index: 99;
+}
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.name-movie {
+    color: #ffffff;
+    text-align: start;
+    font-family: var(--font-family);
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.category-movie {
+    font-size: 13px;
+    line-height: 16.25px;
+    text-align: start;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0px;
+    font-weight: 150 !important;
+    font-family: var(--font-family);
+}
+.rate-movie {
+    text-align: start;
+    font-size: 13px !important;
+}
+.container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.container .img-overlay {
+    width: 220px;
+    height: 320px;
+    border-radius: 0.45em;
+    border: 1px solid #ffffff80;
+    transition: 0.5s all ease-in-out;
+}
+.img-overlay:hover {
+    border-radius: 0.45em;
+    border: 1px solid #ffffff80;
+    transform: scale(1.05);
+}
+.container:hover .icon-overlay {
+    transform: scale(1.05);
+}
+.tag-overlay {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+}
+
+.tag-overlay2 {
+    position: absolute;
+    top: 5px;
+    left: 48px;
+    z-index: 1;
+}
+
+.name-movie {
+    color: #ffffff;
+    text-align: start;
+    font-family: var(--font-family);
+}
+.theloai-modal {
+    color: gray;
+    font-size: 13px;
+      .span:not(:last-child)::after {
+        content: ', ';
+    }
+}
+.the-loai-phim {
+    font-size: 13px;
+    line-height: 16.25px;
+    text-align: start;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0px;
+    font-weight: 300 !important;
+    font-family: var(--font-family) !important;
+
+    .span:not(:last-child)::after {
+        content: ', ';
+    }
+}
+.category-movie {
+    font-size: 13px;
+    line-height: 16.25px;
+    text-align: start;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0px;
+    font-weight: 150 !important;
+    font-family: var(--font-family);
+}
+
+.rate-movie {
+    text-align: start;
+    font-size: 13px !important;
+}
+.icon-overlay {
+    position: absolute;
+    top: 47%;
+    left: 35%;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.id-overlay {
+   position: absolute;
+    top: 89%;
+    left: 2%;
+    font-size: 50px;
+    line-height: 24px;
+    text-align: start;
+    text-shadow: black 0.2em 0.2em 0.3em;
+    font-weight: 700;
+    font-family: var(--font-family) !important;
+}
+.img-modal {
+    border-radius: 3px;
+}
+.theloai-modal {
+    color: gray;
+    font-size: 13px;
+}
+
+.title-name-card {
+   font-family: var(--font-family);
+    font-size: 35px;
+    color: #000;
+    font-weight: 600;
+}
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.name-video-modal {
+    text-align: start;
+    margin-right: '-10px';
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        width: 50%;
+        height: auto;
+    }
+    .id-overlay {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-container {
+        border-radius: 0;
+        padding: 5px;
+    }
+}
+.loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    backdrop-filter: blur(0px);
+
+    .imgL {
+        margin-top: -150px;
+        font-size: 50px;
+        color: var(--pink);
+    }
+}

@@ -1,0 +1,5 @@
+### VS Code ###
+.vscode/
+.metadata/
+.node_modules/
+# .ckeditor5/

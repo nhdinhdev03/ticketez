@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+// a {
+//     text-decoration: none;
+// }
+// ul {
+//     list-style-type: none;
+// }
+
+.name-short {
+    margin-top: 5px;
+    display: inline-block;
+    max-width: 150px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ 
+  }
+  
+.flexSB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+.container {
+    max-width: 90%;
+    margin: auto;
+}
+button {
+    background: #e50813;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 12px 40px;
+    font-weight: 500;
+    font-size: 17px;
+}
+.row {
+    width: 50%;
+}
+p {
+    line-height: 30px;
+}
+header {
+    height: 10vh;
+    line-height: 10vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)
+    );
+    color: #fff;
+    position: relative;
+    z-index: 999;
+}
+.logo img {
+    width: 150px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+header a {
+    color: #fff;
+    margin-left: 30px;
+}
+header i {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 0 10px;
+}
+header button {
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.toggle {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    header nav .flexSB {
+        display: none;
+    }
+    .account {
+        display: none;
+    }
+    .navMenu-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #e50813;
+        width: 50%;
+        height: 100vh;
+        z-index: 9999;
+    }
+    header ul li {
+        align-items: left;
+        margin-top: 30px;
+        padding: 0 50px;
+    }
+    .toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+        cursor: pointer;
+        background: none;
+    }
+}
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+/* button styling */
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #e50813;
+    --fs-size: 1em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: 'Arial';
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+}

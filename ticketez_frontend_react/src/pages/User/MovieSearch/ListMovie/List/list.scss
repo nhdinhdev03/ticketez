@@ -1,0 +1,129 @@
+.container-list {
+    position: relative;
+    // background-color: red;
+}
+
+
+.container-list .img-overlay {
+    width: 200px;
+    height: 300px;
+    transition: transform 0.4s;
+    object-fit: contain;
+}
+.img-overlay:hover {
+    transform: scale(1.03);
+}
+
+.tag-overlay {
+    position: absolute;
+    top: 8px;
+    left: 29px;
+    display: flex;
+    z-index: 1px;
+    
+}
+
+.name-movie {
+    // z-index: 50;
+    text-align: start;
+    font-family: var(--font-family);
+}
+
+.category-movie {
+    font-size: 13px;
+    line-height: 16.25px;
+    text-align: start;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0px;
+    font-weight: 150 !important;
+    font-family: var(--font-family);
+}
+
+.rate-movie {
+    text-align: start;
+}
+.icon-overlay {
+    position: absolute;
+    top: 31.5%;
+    left: 37%;
+    z-index: 49;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.container-list:hover .icon-overlay {
+    transform: scale(1.05);
+}
+.img-modal {
+    border-radius: 3px;
+}
+.theloai-modal {
+    color: gray;
+    font-size: 13px;
+    .span:not(:last-child)::after {
+        content: ', ';
+    }
+}
+.the-loai-phim {
+    font-size: 13px;
+    line-height: 16.25px;
+    text-align: start;
+    color: #a3a3a3;
+    text-decoration: none solid rgb(0, 0, 0);
+    word-spacing: 0px;
+    font-weight: 150 !important;
+    font-family: var(--font-family) !important;
+    margin-top: 5px;
+
+    .span:not(:last-child)::after {
+        content: ', ';
+    }
+}
+
+.name-card .title-name-card {
+    font: 700 4em/1 'Oswald', sans-serif;
+    letter-spacing: 0;
+    padding: 0.5em 0 0.325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.name-video-modal {
+    text-align: start;
+    margin-right: '-10px';
+}
+
+@media (max-width: 768px) {
+    .image-container-list img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-container-list {
+        border-radius: 0;
+        padding: 5px;
+    }
+}

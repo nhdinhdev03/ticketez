@@ -1,0 +1,98 @@
+.profileFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: #f7f7f7;
+
+  .profileFormCard {
+    box-sizing: border-box;
+    margin-top: 2rem; 
+    padding: 2rem;
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: margin-top 0.3s ease;
+
+    .profileDisplay {
+      text-align: center;
+
+      p {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #1890ff;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #40a9ff;
+        }
+      }
+
+      &.editing {
+        .profileFormCard {
+          margin-top: 1rem; 
+        }
+      }
+    }
+
+    .ant-form {
+      .ant-form-item {
+
+        margin-bottom: 1px;
+
+        &.full-name {
+          margin-bottom: 1px;
+
+          .ant-form-item-label {
+            padding-bottom: 0;
+          }
+
+          .ant-form-item-control {
+            margin: 0;
+          }
+        }
+
+
+
+        .ant-input,
+        .ant-picker {
+          border-radius: 4px;
+          border: 1px solid #d9d9d9;
+        }
+
+        .ant-radio-group {
+          .ant-radio-button-wrapper {
+            margin-right: 8px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+
+    .buttonGroup {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+
+      button {
+        margin-left: 8px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,129 @@
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 105vh;
+}
+.formLabel {
+
+  margin-left: -70%;
+  white-space: nowrap;
+}
+.formLabelPassword {
+
+  margin-left: -80%;
+  white-space: nowrap;
+}
+.loginContainer {
+  padding: 24px;
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.header {
+  background: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.welcomeText {
+  margin-bottom: 40px;
+  color: #666;
+  font-size: 14px;
+}
+
+.loginLayout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .content {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .leftContainer {
+    flex-basis: 50%; 
+  }
+  
+  .rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECECEC;
+  }
+  
+  .imageStyle {
+    max-width: 100%;
+    height: 590px;
+    border-radius: 8px;
+  }
+  
+
+.loginForm {
+  .ant-form-item {
+    margin-bottom: 16px;  
+  }
+  
+  .input {
+    padding: 4px 11px;
+    height: 40px; // Set height of your inputs
+  }
+
+  .loginButton {
+    width: 100%;
+    height: 40px;
+  }
+
+  .checkbox {
+    float: left;
+  }
+
+  .forgot {
+    float: right;
+  }
+
+  .signup {
+
+    font-size: 14px;
+    margin-right: 18px;
+  }
+.Qtk{
+  margin-right: 35px;
+}
+
+  
+}
+
+
+
+// Add responsive styles if needed
+@media (max-width: 768px) {
+  .loginContainer {
+    margin: 10px;
+  }
+
+  
+}
+
+
+
+
+//
+
+

@@ -1,0 +1,193 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: rgb(34, 30, 30);
+}
+
+#divContainer {
+    width: 100%;
+    overflow: auto;
+    overflow-x: auto; /* Thêm thanh cuộn ngang */
+}
+
+table.grid {
+    min-width: 100%;
+    white-space: nowrap; /* Ngăn các dòng văn bản bị ngắt khi cuộn ngang */
+    table-layout: fixed; /* Cố định độ rộng cột để tránh sự thay đổi đột ngột */
+}
+
+.ca {
+    padding: 20px;
+    border: 1px solid rgb(241, 241, 241);
+    margin: 20px;
+}
+ul.mar {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul.mar li {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        width: 100%;
+    }
+
+    .grid td {
+        height: 25px;
+        width: 25px;
+        padding: 5px 5px;
+    }
+}
+.grid {
+    display: flex;
+    justify-content: center; /* căn giữa theo chiều ngang (hozi) */
+    align-items: center; /* căn giữa theo chiều dọc (verti) */
+
+    // background-color: #404040;
+    /* height: 600px; */
+    width: 100%;
+}
+
+.grid td {
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    border: 2px solid rgb(249, 249, 249, 0.5);
+    text-align: center;
+    float: left;
+    margin: 5px;
+}
+
+.grid td div {
+    position: relative;
+    bottom: 50px;
+}
+
+.grid td:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+// Đã đặt
+.unavailable {
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #404040;
+    // pointer-events: none;
+}
+// Ghế bạn chọn
+.reserved {
+    border-radius: 10px;
+    border-color: #1ea83c !important;
+    color: #fff;
+    background-color: #1ea83c !important;
+    display: inline-block;
+}
+
+/*ghế thường */
+.normal-seat {
+ 
+    background-color: #5b2b9f; 
+ 
+}
+
+/*ghế VIP */
+.vip-seat {
+  
+    background-color: #b7232b; 
+
+}
+
+.couple-seat {
+    background-color: #d82d8b;
+    transform: scaleX(2);
+}
+
+.way {
+    visibility: hidden;
+    text-indent: -9999px;
+    // text-indent: -9999px;
+}
+.way-user {
+    visibility: hidden;
+    text-indent: -9999px;
+}
+
+.available {
+    color: white;
+}
+li {
+    list-style: none;
+}
+
+// Roww
+.header-cell {
+    display: flex;
+    align-items: center; /* Canh giữa theo chiều dọc */
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    text-align: center;
+    border-radius: 5px;
+    max-width: 30px;
+    max-height: 30px;
+    color: white;
+    // background-color: #090410;
+}
+
+/* Trong tệp CSS hoặc SCSS của bạn */
+.protected-element {
+    border-radius: 10px;
+    color: white; 
+    user-select: none; /* Ngăn chọn văn bản */
+}
+
+.screen {
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    width: 200px;
+    height: 10px;
+}
+.screen-title {
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    width: 200px;
+    height: 10px;
+}
+.ant-modal-content {
+    margin-bottom: 20px; /* Thay đổi giá trị 20px theo mong muốn của bạn */
+}
+
+.baoBoc {
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+/* Tạo thanh trượt ngang cho phần "ca" */
+.ca {
+    max-height: 300px; /* Giới hạn chiều cao của phần "ca" để hiển thị thanh trượt dọc */
+    overflow-y: auto; /* Tạo thanh trượt dọc khi nội dung vượt quá kích thước */
+}
+
+/* Tạo thanh trượt dọc cho bảng */
+.grid {
+    width: 100%; /* Đảm bảo chiều rộng của bảng là 100% */
+    overflow-x: auto; /* Tạo thanh trượt ngang khi bảng vượt quá kích thước */
+}
+
+/* Các lớp CSS khác (reserved, normal-seat, vip-seat, ...) */

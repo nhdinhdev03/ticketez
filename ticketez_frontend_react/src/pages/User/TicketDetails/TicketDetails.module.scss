@@ -1,0 +1,236 @@
+@import '../../../scss/global';
+$bg-color: #ffffff;
+$text-color-gray: rgb(132, 132, 132);
+$text-color-black: #161616;
+$bg-ticket: $blue-100;
+.wrapper {
+    all: initial;
+    // line-height: 1.6rem;
+
+    .container {
+        background-color: $bg-color;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.wrapper-ticket {
+    width: 420px;
+    min-height: 200px;
+    // margin: 50px auto;
+    // padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: left;
+
+    // text-transform: uppercase;
+    .ticket-head {
+        background-position: center;
+        background-size: cover;
+        border-radius: 4px 4px 0 0;
+        background-color: $bg-ticket;
+        color: white;
+        // border-bottom: 2px solid #ccc;
+        color: $text-color-gray;
+        position: relative;
+        padding: 25px 25px 0px 25px;
+        .wrapp-movie-poster {
+            .box-movie-poster {
+                width: 100%;
+                height: 100%;
+                background-color: #2a73bd;
+                border-radius: 4px;
+                overflow: hidden;
+                .poster {
+                    border-radius: 4px;
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.2s ease-in-out;
+                    transform-origin: center center;
+                    object-fit: cover;
+                }
+                &:hover .poster {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .wrapp-movie-info {
+            padding: 0px 0px 0px 10px;
+            .info-movie {
+                .movie-name {
+                    font-size: 20px;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    color: $text-color-black;
+                    font-weight: 700;
+                    white-space: normal;
+                }
+                .format-movie {
+                    margin-top: 5px;
+                    font-weight: 500;
+                }
+                .cinema-clx-name {
+                    font-size: 15px;
+                    color: $text-color-black;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .ticket-body {
+        border-bottom: 2px dashed rgb(211, 211, 211);
+        padding: 15px 25px;
+        background-color: $bg-ticket;
+        position: relative;
+    }
+    .ticket-body::before,
+    .ticket-body::after {
+        background-color: $bg-color;
+        border-radius: 100%;
+        content: '';
+        height: 15px;
+        position: absolute;
+        top: 100%;
+        width: 20px;
+    }
+    .ticket-body::after {
+        right: 0;
+        border-left: 1px solid #ccc;
+        transform: translate(70%, -45%);
+    }
+    .ticket-body::before {
+        left: 0;
+        border-right: 1px solid #ccc;
+        transform: translate(-70%, -45%);
+    }
+    .ticket-footer-top {
+        color: $text-color-gray;
+        padding: 15px 25px 0px 25px;
+        .wrapp-info-top {
+            border-bottom: 2px solid #ccc;
+        }
+
+        .wrapp-info-top,
+        .wrapp-info-center,
+        .wrapp-info-bottom {
+            padding: 10px 0px;
+        }
+    }
+    .ticket-footer-bottom {
+        padding: 15px 25px;
+        border-radius: 0px 0px 4px 4px;
+        background-color: #f0f0f0;
+    }
+    .note {
+        margin-top: 10px;
+        font-style: italic;
+        font-size: 12px;
+        color: $text-color-gray;
+    }
+}
+
+.wrapper-ticket.light {
+    background-color: #fff;
+    color: $text-color-black;
+}
+.ticket-qrcode-area {
+    display: flex;
+    justify-content: end;
+    .qrcode {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    }
+}
+.info-ticket {
+    margin-bottom: 10px;
+    .ticket-title {
+        color: $text-color-gray;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .ticket-body-text {
+        // font-size: 18px;
+        margin: 5px 0px;
+        .show-date {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        .ticket-id {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .ticket-time {
+            color: $blue-600;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .cinema-name,
+        .ticket-quatity,
+        .seats-name,
+        .cinema-complex-name {
+            font-size: 16px;
+            color: $text-color-black;
+            font-weight: 500;
+        }
+        .cinema-clx-address {
+            font-size: 12px;
+            line-height: 1.6rem;
+            color: #737373;
+        }
+    }
+}
+.box-logo-cinema-chain {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    .logo-cinema-chain {
+        border-radius: 4px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.info-ticket-bottom {
+    .ticket-info-inner:not(:first-child) {
+        margin-top: 8px;
+    }
+    .ticket-info-inner {
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        .title {
+            color: $text-color-gray;
+        }
+        .total-price {
+            font-size: 16px;
+            font-weight: 700;
+            color: $text-color-black;
+        }
+        .transaction-id {
+            color: #2a73bd;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        .paid-datetime {
+            font-size: 13px;
+            font-weight: 500;
+            color: $text-color-gray;
+        }
+    }
+}
+.status-ticket {
+    position: absolute;
+    color: rgb(250, 81, 81);
+    opacity: 0.6;
+    font-weight: 800;
+    font-size: 32px;
+    border: 5px double rgb(250, 81, 81);
+    border-radius: 5px;
+    padding: 2px;
+    transform: translate(100px, 100px) rotate(-16deg);
+    z-index: 1;
+}

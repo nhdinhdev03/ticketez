@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.body {
+    font-family: var(--font-family);
+}
+
+.title-card-top {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none solid rgba(242, 246, 250, 0.85);
+    color: #a0aec0;
+    word-spacing: 0px;
+    font-family: var(--font-family);
+}
+
+.button-card-top {
+    height: 45px;
+    width: 45px;
+    border: 0px solid #e2e8f0;
+    min-height: auto;
+    min-width: auto;
+    border-radius: 12px;
+    background-color: var(--primary-color) !important;
+    margin-top: 5px;
+    font-family: var(--font-family);
+}
+
+.button-card-top:hover {
+    background-color: var(--primary-color) !important;
+}
+
+.card-top {
+    border-radius: 15px;
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding-left: -10px;
+}
+
+.money-card-top {
+    font-variant: proportional-nums;
+    font-weight: 600;
+    line-height: 27px;
+    text-decoration: none solid rgb(31, 39, 51);
+    word-spacing: 0px;
+    font-size: 18px;
+    font-family: var(--font-family);
+}
+
+.char-card-top {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none solid rgba(242, 246, 250, 0.85);
+    word-spacing: 0px;
+    color: #4F709C;
+    font-family: var(--font-family);
+}
+
+.card-chart-donut {
+    border-radius: 15px;
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+    height: 464px;
+}

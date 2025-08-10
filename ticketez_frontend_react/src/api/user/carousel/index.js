@@ -1,0 +1,1 @@
+export { MovieShowingUserAPI } from './showing';

@@ -1,0 +1,97 @@
+$bg-color: #ffffff;
+$color-success: #2fbb7e;
+$color-fail: #fe3636;
+$text-color-gray: rgb(132, 132, 132);
+$text-color-black: #161616;
+$bg-ticket: #fff0f5;
+.wrapper {
+    all: initial;
+    // line-height: 1.6rem;
+
+    .container {
+        background-color: $bg-color;
+        display: flex;
+        justify-content: center;
+        margin: 50px auto;
+    }
+}
+.wrapper-box-status,
+.wrapper-ticket-details {
+    width: 420px;
+    min-height: 200px;
+    // padding: 10px;
+}
+.wrapper-box-status {
+    padding: 30px;
+    z-index: 3;
+    display: flex;
+    border-radius: 4px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    .wrapp-icon {
+        .icon {
+            font-size: 100px;
+        }
+        .icon.success {
+            color: $color-success;
+        }
+        .icon.fail {
+            color: $color-fail;
+        }
+    }
+
+    .btn-redirect {
+        border: none;
+        border-radius: 20px;
+        &:hover {
+            color: white !important;
+            opacity: 0.8;
+        }
+    }
+    .btn-redirect.success {
+        background-color: $color-success;
+        color: white;
+    }
+    .btn-redirect.fail {
+        background-color: $color-fail;
+        color: white;
+    }
+    .title.success {
+        color: $color-success;
+    }
+    .title.fail {
+        color: $color-fail;
+    }
+    .title {
+        margin: 15px 0px 30px 0px;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .message {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-bottom: 10px;
+    }
+}
+
+.wrapper-ticket-details {
+    margin-left: 10px;
+}
+
+.wrapper-ticket.light {
+    background-color: #fff;
+    color: $text-color-black;
+}
+@media print {
+    .custom-print-body {
+        height: 100vh;
+        // width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
